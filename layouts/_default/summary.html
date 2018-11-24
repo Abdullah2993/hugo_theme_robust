@@ -14,7 +14,7 @@
       {{ end }}
     </ul>
 
-    {{ partial "share.html" . }}
+    <!-- {{ partial "share.html" . }} -->
   </header>
 
   {{ if .Params.toc }}
@@ -23,7 +23,11 @@
   </div>
   {{ end }}
 
-  <div class="article-body">{{ .Content }}</div>
+  <div class="article-body">
+    {{ .Content }}
+    
+    <a href="{{ .Params.link }}" class="buttonDownload">Download</a>
+  </div>
 
   <footer class="article-footer">
 
